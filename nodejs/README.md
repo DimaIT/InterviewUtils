@@ -6,7 +6,9 @@
 
 1. **Git:** create new branch from master, name: `dev-${your-name}`.
 
-2. **Async/await:** change `asyncHandler` in `test-task/src/tasks/async-service.js` to use async/await syntax.
+2. **Async/await:** in `test-task/src/tasks/async-service.js` we have few functions with chains of promises. 
+Change them to use async/await syntax.
+Functions are covered with tests, run `npm t` to check that they work as expected.
 
 3. **Express**
 
