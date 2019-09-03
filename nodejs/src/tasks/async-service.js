@@ -38,8 +38,8 @@ module.exports.asyncHandlerThrow = function (input) {
 module.exports.asyncHandlerResolve = function (input) {
   return Promise.resolve(input)
     .then(asyncFn)
-    .catch(e => {
-      const messageWithoutError = e.message.split('error').join('');
+    .catch(({ message }) => {
+      const messageWithoutError = message.split('error').join('');
       return `catch ${messageWithoutError}`;
     })
     .then(asyncFn);
